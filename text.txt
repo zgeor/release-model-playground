@@ -12,3 +12,4 @@
 12. Major Release
 13. Minor Release
 14. Minor release 5
+15. Minor release 6
