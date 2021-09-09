@@ -5,3 +5,4 @@
 5. Patch release 2
 6. Minor release
 7. Patch release 3
+8. Patch release 4
