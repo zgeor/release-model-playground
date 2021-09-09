@@ -45,6 +45,6 @@ jobs:
       run: ./gradlew build
   upload-release:
     runs-on: ubuntu-latest
-      steps:
-      - name: Upload to some package repository
-        run: echo "Uploaded to wherever"
+    steps:
+    - name: Upload to some package repository
+      run: echo "Uploaded to wherever"
