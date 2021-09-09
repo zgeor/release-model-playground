@@ -3,3 +3,4 @@
 3. Minor release
 4. Major release
 5. Patch release 2
+6. Minor release
