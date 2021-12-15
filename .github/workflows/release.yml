@@ -1,25 +1,19 @@
-name: Publish packages
-on: 
-  release:
-    types:
-      - released
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: set up JDK 11
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
-        distribution: 'adopt'
-        cache: gradle
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
-  upload-release:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Upload to some package repository
-      run: echo "Uploaded to wherever"
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+      - dependabot
+    authors:
+      - octocat
+  categories:
+    - title: Breaking Changes 🛠
+      labels:
+        - Semver-Major
+        - breaking-change
+    - title: Exciting New Features 🎉
+      labels:
+        - Semver-Minor
+        - enhancement
+    - title: Other Changes
+      labels:
+        - "*"
